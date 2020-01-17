@@ -3,7 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Nagma.PigLatin
+namespace Nagma.Text
 {
     public static class Helpers // Make ToPigLatin an extension method for strings
     {

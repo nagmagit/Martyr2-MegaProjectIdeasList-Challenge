@@ -1,18 +1,16 @@
+using NUnit.Framework;
 using System;
 using System.Text;
-using NUnit.Framework;
-using Nagma.PigLatin;
 
-namespace Nagma.PigLatin.UnitTests
+namespace Nagma.Text.UnitTests
 {
     [TestFixture]
     [Description("Tests for the method \"Nagma.PigLatin.PigLatin.WordToPigLatin\"")]
     public class TestWordToPigLatin
     {
-        readonly string[] GroundTruth_Samples = { "pig", "latin", "banana", "happy", "duck", "me", "too", "bagel", "smile", "string", "stupid", "glove", "trash", "floor", "store", "eat", "omelet", "are", "explain", "always", "ends", "honest", "I" };
-        readonly string[] GroundTruth_Expected = { "igpay", "atinlay", "ananabay", "appyhay", "uckday", "emay", "ootay", "agelbay", "ilesmay", "ingstray", "upidstay", "oveglay", "ashtray", "oorflay", "orestay", "eatyay", "omeletyay", "areyay", "explainyay", "alwaysyay", "endsyay", "onesthay", "iyay" };
-
-        readonly int HugeValidStrings_StringLength = 10000000;
+        private readonly string[] GroundTruth_Samples = { "pig", "latin", "banana", "happy", "duck", "me", "too", "bagel", "smile", "string", "stupid", "glove", "trash", "floor", "store", "eat", "omelet", "are", "explain", "always", "ends", "honest", "I" };
+        private readonly string[] GroundTruth_Expected = { "igpay", "atinlay", "ananabay", "appyhay", "uckday", "emay", "ootay", "agelbay", "ilesmay", "ingstray", "upidstay", "oveglay", "ashtray", "oorflay", "orestay", "eatyay", "omeletyay", "areyay", "explainyay", "alwaysyay", "endsyay", "onesthay", "iyay" };
+        private readonly int HugeValidStrings_StringLength = 10000000;
 
         [Test]
         public void TestGroundTruth()
@@ -36,7 +34,7 @@ namespace Nagma.PigLatin.UnitTests
 
             sampleBuilder.Append("P");
 
-            for (int i = 0; i < HugeValidStrings_StringLength-1; i++)
+            for (int i = 0; i < HugeValidStrings_StringLength - 1; i++)
             {
                 sampleBuilder.Append("A");
                 expectedBuilder.Append("a");
@@ -71,7 +69,7 @@ namespace Nagma.PigLatin.UnitTests
         {
             string sample = "//**//**--++--++..--..--,,çç,,çç´´++´´++``¡¡``¡¡¿¿''¿¿''??==??==))(())((&&%%&&$$··$$··\"\"\"\"!!||@@||@@##¬¬##¬¬ººªªººªª[[]][[]]{{}}{{}}<<>><<>>";
 
-            Assert.Throws(typeof(ArgumentException), () => 
+            Assert.Throws(typeof(ArgumentException), () =>
             {
                 PigLatin.WordToPigLatin(sample);
             }, "If the string contains any non letter characters it MUST throw an ArgumentException");

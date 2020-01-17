@@ -1,7 +1,7 @@
 ﻿using System;
 using Nagma;
 
-namespace Nagma.PigLatin.Example
+namespace Nagma.Text.Example
 {
     class Program
     {

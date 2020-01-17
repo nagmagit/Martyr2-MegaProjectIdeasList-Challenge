@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Nagma.PigLatin
+namespace Nagma.Text
 {
     public static class PigLatin
     {
