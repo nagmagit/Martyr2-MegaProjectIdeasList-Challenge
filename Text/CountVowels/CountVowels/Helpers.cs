@@ -11,7 +11,7 @@ namespace Nagma.CountVowels
         /// </summary>
         public static Dictionary<char, int> CountVowels(this string str)
         {
-            return str.CountChars("aeiou");
+            return str.ToLower().CountChars("aeiou");
         }
 
         /// <summary>
