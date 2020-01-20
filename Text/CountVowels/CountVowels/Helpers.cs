@@ -17,9 +17,10 @@ namespace Nagma.CountVowels
         /// <summary>
         /// Returns a dictionary with the amount of times that each character from the array appears.
         /// </summary>
+        /// <exception cref="NullReferenceException"></exception>
         public static Dictionary<char, int> CountChars(this string str, char[] charsToCount)
         {
-            if (charsToCount is null) return new Dictionary<char, int>();
+            if (charsToCount is null) throw new NullReferenceException("The array \"charsToCount\" can't be null.");
 
             return str.CountChars(String.Join(String.Empty, charsToCount));
         }
@@ -29,7 +30,7 @@ namespace Nagma.CountVowels
         /// </summary>
         public static Dictionary<char, int> CountChars(this string str, string charsToCount)
         {
-            if (charsToCount is null) return new Dictionary<char, int>();
+            if (charsToCount is null) throw new NullReferenceException("The string \"charsToCount\" can't be null.");
 
             return (Dictionary<char, int>)str.CountChars().Where(pair => charsToCount.Contains(pair.Key));
         }
