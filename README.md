@@ -28,6 +28,6 @@ Enter a string and the program counts the number of vowels in the text. For adde
 
 ### Databases projects: 0/13
 
-### Graphics and Multimedia projects: 00/17
+### Graphics and Multimedia projects: 0/17
 
 ### Games projects: 0/5
