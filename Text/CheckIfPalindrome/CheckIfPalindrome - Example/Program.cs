@@ -19,7 +19,7 @@ namespace Nagma.CheckIfPalindrome
             #endregion
 
             #region Print results
-            string results = $"{text} {isOrIsNot} palindrome.";
+            string results = $"\"{text}\" {isOrIsNot} palindrome.";
 
             Console.WriteLine(results);
             #endregion
