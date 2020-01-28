@@ -1,9 +1,7 @@
 ﻿using NeoSmart.Unicode;
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
-using System.Text;
 
 namespace Nagma.CheckIfPalindrome
 {
@@ -40,7 +38,7 @@ namespace Nagma.CheckIfPalindrome
                 }
 
                 Codepoint codepoint = codepoints[i];
-                Codepoint nextCodepoint = codepoints[i+1];
+                Codepoint nextCodepoint = codepoints[i + 1];
 
                 // If it's an actual emoji, add it combined
                 if (TryCombinedEmoji(out SingleEmoji combinedEmoji, codepoint, nextCodepoint))
