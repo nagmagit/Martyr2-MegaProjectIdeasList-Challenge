@@ -1,11 +1,11 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Linq;
-using static ReverseString.UnitTests.Helpers;
+using NUnit.Framework;
+using static Nagma.ReverseString.UnitTests.Helpers;
 
-namespace ReverseString.UnitTests
+namespace Nagma.ReverseString.UnitTests
 {
-    [TestClass]
+    [TestFixture]
     public class UnitTest
     {
         readonly string[] GROUNDTRUTH_SAMPLES  = { "onlylower", "ONLYUPPER", "UPPERAndlower", "123456", "lowerand123456", "UPPERAND123456", "UPPERlowerand123456", "\"·$%&/()=", "lowerand!\"·$%&/()=", "UPPERAND\"·$%&/()=", "UPPERlowerAnd\"·$%&/()=", "lower123456and\"·$%&/()=", "UPPER123456AND\"·$%&/()=", "UPPERlower123456And\"·$%&/()=" };
@@ -13,7 +13,7 @@ namespace ReverseString.UnitTests
         readonly int RANDOMTESTS_STRINGLENGTH = 20;
         readonly int RANDOMTESTS_COUNT = 20;
 
-        [TestMethod]
+        [Test]
         public void TestGroundTruth()
         {
             for (int i = 0; i < GROUNDTRUTH_SAMPLES.Length; i++)
@@ -27,7 +27,7 @@ namespace ReverseString.UnitTests
             }
         }
 
-        [TestMethod]
+        [Test]
         public void TestRandomStrings()
         {
             for (int i = 0; i < RANDOMTESTS_COUNT; i++)

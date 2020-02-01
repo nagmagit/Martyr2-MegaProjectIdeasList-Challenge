@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Text;
 
-namespace ReverseString.UnitTests
+namespace Nagma.ReverseString.UnitTests
 {
     public static class Helpers
     {
