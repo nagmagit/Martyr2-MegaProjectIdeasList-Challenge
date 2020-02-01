@@ -1,7 +1,16 @@
-# "Martyr'2 Mega Project Ideas List!" Challenge
+# "Martyr2's Mega Project Ideas List!" Challenge
 An attempt at making all the project ideas from: http://www.dreamincode.net/forums/topic/78802-martyr2s-mega-project-ideas-list/
 
 Complete with unit tests and example programs for each project.
+
+## Project frameworks
+| Type of project     | Framework / Library       |
+| ------------------- | ------------------------- |
+| __Class library__   | .NET Standard             |
+| __Console example__ | .NET Core                 |
+| __GUI example__     | .NET Framework / WinForms |
+| __Web project__     | ASP.Net / ?               |
+| __Testing suite__   | .NET Core / NUnit         |
 
 ## Projects completed: 4/109
 
@@ -11,7 +20,7 @@ Complete with unit tests and example programs for each project.
 Enter a string and the program will reverse it and print it out.
 
 #### [Pig Latin](Text/PigLatin)
-Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay). Read Wikipedia for more information on rules.
+Pig Latin is a game of alterations played on the English language game. To create the Pig Latin form of an English word the initial consonant sound is transposed to the end of the word and an "ay" is affixed (Ex.: "banana" would yield "anana-bay"). Read Wikipedia for more information on rules.
 
 #### [Count Vowels](Text/CountVowels)
 Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum of each vowel found.
