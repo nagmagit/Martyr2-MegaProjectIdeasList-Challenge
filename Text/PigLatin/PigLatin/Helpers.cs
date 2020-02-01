@@ -39,7 +39,7 @@ namespace Nagma.Text
 
             #region Generate output
             #region Add preceding text
-            outputBuilder.Append(text.Substring(0, matches.First().Index));
+            outputBuilder.Append(text.Substring(0, matches[0].Index));
             #endregion
 
             #region Convert matches to PigLatin and replace them in the string
@@ -65,7 +65,7 @@ namespace Nagma.Text
             #endregion
 
             #region Add succeeding text
-            Match lastMatch = matches.Last();
+            Match lastMatch = matches[matches.Count - 1];
             int succeedingTextIndex = lastMatch.Index + lastMatch.Length;
             int succeedingTextLength = text.Length - succeedingTextIndex;
 

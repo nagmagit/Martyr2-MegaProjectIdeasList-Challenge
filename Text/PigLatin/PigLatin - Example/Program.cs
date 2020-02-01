@@ -1,5 +1,4 @@
 ﻿using System;
-using Nagma;
 
 namespace Nagma.Text.Example
 {
@@ -16,17 +15,6 @@ namespace Nagma.Text.Example
             string result = text.ToPigLatin();
 
             Console.WriteLine("Result: {0}", result);
-
-            //WaitForKeyToExit(true);
-        }
-
-        private static void WaitForKeyToExit(bool showPressKeyMsg)
-        {
-            if (showPressKeyMsg) Console.WriteLine("Press any key to exit...");
-
-            Console.Read();
-
-            Environment.Exit(0);
         }
     }
 }
