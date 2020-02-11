@@ -68,6 +68,17 @@ namespace Nagma.CountWordsInAString.UnitTests
         }
 
         [Test]
+        public void WordLengthSummary_OnlyDelimiters_ReturnsEmptyDictionary()
+        {
+            string input = "          ";    // 10 spaces
+            Dictionary<int, int> expected = new Dictionary<int, int>();
+
+            Dictionary<int, int> actual = TextAnalysis.WordLengthSummary(input);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [Test]
         public void WordLengthSummary_NullText_ThrowsNullReferenceException()
         {
             string input = null;
