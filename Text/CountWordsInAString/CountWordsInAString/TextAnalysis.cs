@@ -15,27 +15,43 @@ namespace Nagma.CountWordsInAString
         /// </summary>
         public static Dictionary<int, int> WordLengthSummary(string text)
         {
-            throw new NotImplementedException();
+            return WordLengthSummary(text, " ");
         }
 
         /// <summary>
-        /// Splits the text with a given Regex pattern that matches the delimeter
+        /// Splits the text with a given Regex pattern that matches the delimiter
         /// between words and returns a dictionary, where its keys are character-counts
         /// and its values are the amount of words with that character-count.
         /// </summary>
         public static Dictionary<int, int> WordLengthSummary(string text, string splitterPattern)
         {
-            throw new NotImplementedException();
+            Regex regex = new Regex(splitterPattern);
+
+            return WordLengthSummary(text, regex);
         }
 
         /// <summary>
-        /// Splits the text with a given Regex pattern that matches the delimeter
+        /// Splits the text with a given Regex pattern that matches the delimiter
         /// between words and returns a dictionary, where its keys are character-counts
         /// and its values are the amount of words with that character-count.
         /// </summary>
         public static Dictionary<int, int> WordLengthSummary(string text, Regex splitterPattern)
         {
-            throw new NotImplementedException();
+            #region Split the string using Regex: words
+
+            #endregion
+
+            #region Select the string-lengths from words: lengths
+
+            #endregion
+
+            #region Select max value (as maxValue) from lengths and create a dictionary with keys 1 to maxValue: summary
+
+            #endregion
+
+            #region Iterate over lengths (as wordLength) and add 1 to the corresponding dictionary-key
+
+            #endregion
         }
     }
 }
