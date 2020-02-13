@@ -12,9 +12,9 @@ Complete with unit tests and example programs for each project.
 | __Web project__     | ASP.Net / ?               |
 | __Testing suite__   | .NET Core / NUnit         |
 
-## Projects completed: 4/109
+## Projects completed: 5/109
 
-### Text projects: 4/17
+### Text projects: 5/17
 
 #### [Reverse string](Text/ReverseString)
 Enter a string and the program will reverse it and print it out.
@@ -27,6 +27,9 @@ Enter a string and the program counts the number of vowels in the text. For adde
 
 #### [Check if palindrome](Text/CheckIfPalindrome)
 Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as backwards like “racecar”
+
+#### [Count words in a string](Text/CountWordsInAString)
+Counts the number of individual words in a string. For added complexity read these strings in from a text file and generate a summary.
 
 ### Networking projects: 0/15
 
