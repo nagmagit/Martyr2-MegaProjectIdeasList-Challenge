@@ -2,9 +2,6 @@ name: Text - Reverse string
 
 on:
   push:
-    branches:
-    - master
-      ci-implementation
     paths:
     - 'Text/ReverseString/**'
 

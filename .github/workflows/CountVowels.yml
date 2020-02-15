@@ -2,9 +2,6 @@ name: Text - Count vowels
 
 on:
   push:
-    branches:
-    - master
-      ci-implementation
     paths:
     - 'Text/CountVowels/**'
 

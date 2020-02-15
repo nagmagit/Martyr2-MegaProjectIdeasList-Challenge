@@ -2,9 +2,6 @@ name: Text - Pig Latin
 
 on:
   push:
-    branches:
-    - master
-      ci-implementation
     paths:
     - 'Text/PigLatin/**'
 
