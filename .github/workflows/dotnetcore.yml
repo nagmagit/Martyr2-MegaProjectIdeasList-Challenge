@@ -1,12 +1,8 @@
-name: .NET Core
-
+name: Text - Reverse string
 on: [push]
-
 jobs:
   build:
-
     runs-on: windows-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
@@ -14,4 +10,4 @@ jobs:
       with:
         dotnet-version: 2.2.108
     - name: Build with dotnet
-      run: dotnet build --configuration Release
+      run: dotnet build Text\ReverseString\ReverseString\ReverseString.csproj
