@@ -1,0 +1,4 @@
+Hi!
+You've stumbled upon a dummy object, whom's purpose is to trigger a "push" event on the "ci-implementation" branch inside this folder.
+This is a workaround to test the workflow, since, as of February 15th 2020, GitHub doesn't support manual triggering of an action.
+Have a great day!
