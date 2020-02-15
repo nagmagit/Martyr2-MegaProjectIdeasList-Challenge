@@ -1,0 +1,35 @@
+name: Text - Count words in a string
+
+on:
+  push:
+    paths:
+    - 'Text/CountWordsInAString/**'
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+
+    - name: Build with dotnet
+      run: dotnet build "Text\CountWordsInAString\CountWordsInAString\CountWordsInAString.csproj"
+
+  tests:
+    name: Tests
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+
+    - name: Test with dotnet
+      run: dotnet test "Text\CountWordsInAString\CountWordsInAString - UnitTests\CountWordsInAString - UnitTests.csproj"
