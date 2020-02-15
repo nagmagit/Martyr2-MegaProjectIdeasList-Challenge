@@ -1,4 +1,4 @@
-name: Text - Reverse string
+name: Text - Count words in a string
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
     - master
       ci-implementation
     paths:
-    - 'Text/ReverseString/**'
+    - 'Text/CountWordsInAString/**'
 
 jobs:
   build:
@@ -21,7 +21,7 @@ jobs:
         dotnet-version: 2.2.108
 
     - name: Build with dotnet
-      run: dotnet build "Text\ReverseString\ReverseString\ReverseString.csproj"
+      run: dotnet build "Text\CountWordsInAString\CountWordsInAString\CountWordsInAString.csproj"
 
   tests:
     name: Tests
@@ -35,4 +35,4 @@ jobs:
         dotnet-version: 2.2.108
 
     - name: Test with dotnet
-      run: dotnet test "Text\ReverseString\ReverseString - UnitTests\ReverseString - UnitTests.csproj"
+      run: dotnet test "Text\CountWordsInAString\CountWordsInAString - UnitTests\CountWordsInAString - UnitTests.csproj"

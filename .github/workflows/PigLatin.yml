@@ -1,9 +1,16 @@
 name: Text - Pig Latin
 
-on: [push]
+on:
+  push:
+    branches:
+    - master
+      ci-implementation
+    paths:
+    - 'Text/PigLatin/**'
 
 jobs:
   build:
+    name: Build
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
@@ -14,4 +21,18 @@ jobs:
         dotnet-version: 2.2.108
 
     - name: Build with dotnet
-      run: dotnet build Text\PigLatin\PigLatin\PigLatin.csproj
+      run: dotnet build "Text\PigLatin\PigLatin\PigLatin.csproj"
+
+  tests:
+    name: Tests
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+
+    - name: Test with dotnet
+      run: dotnet test "Text\PigLatin\PigLatin - UnitTests\PigLatin - UnitTests.csproj"
