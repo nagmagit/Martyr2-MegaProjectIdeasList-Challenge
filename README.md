@@ -8,8 +8,7 @@ Complete with unit tests, example programs and CI for each project.
 | ------------------- | ------------------------- |
 | __Class library__   | .NET Standard             |
 | __Console example__ | .NET Core                 |
-| __GUI example__     | .NET Framework / WinForms |
-| __Web project__     | ASP.Net / ?               |
+| __GUI example__     | .NET Core / WinForms      |
 | __Testing suite__   | .NET Core / NUnit         |
 
 ## Projects completed: 5/109
